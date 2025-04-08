@@ -1,6 +1,7 @@
 import os
 import csv
 import base64
+import time
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -35,7 +36,7 @@ with open(OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as file:
 
             try:
                 response = client.chat.completions.create(
-                    model="gpt-4o",
+                    model="gpt-4o-mini",
                     messages=[
                         {
                             "role": "system",
@@ -55,6 +56,8 @@ with open(OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as file:
                 cleaned_result = extract_classification(raw_result)
                 print(f"→ Result: {cleaned_result}")
                 writer.writerow([filename, cleaned_result])
+                time.sleep(0.6)  # find the limit
             except Exception as e:
                 print(f"Error: {e}")
                 writer.writerow([filename, "error"])
+                time.sleep(1)
