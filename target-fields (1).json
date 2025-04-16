@@ -1,0 +1,60 @@
+{
+  "searchResults": [
+    {
+      "property": {
+        "address": {
+          "streetAddress": "1701 Jackson St APT 105",
+          "zipcode": "94109",
+          "city": "San Francisco",
+          "state": "CA",
+          "buildingId": 1001873435
+        },
+        "media": {
+          "allPropertyPhotos": {
+            "highResolution": [
+              "https://photos.zillowstatic.com/fp/aeeea482e9bc4f35842a3d1e4424a21e-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/b4d27512ce4cbbdc90f5be4ea627908d-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/20f347a160a9c8f8de468b84d4120c92-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/7a79120778ef71a7460be16c4db37639-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/77d557c09a956369d126f6ea7fb1947f-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/6cf71aed9ca2447fe42550d729e459aa-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/ecb2a29c1cf54479e2ccb1a92bb5796c-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/b9fb71732bcd1222803772b3eebafdf4-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/338ba1bf046a261de79ca5ae23577f36-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/9115e0036ad6b258c9771599ce070b3b-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/7e7ffe25eab885cb14e8890f44c5de0b-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/de5ffdd1b19ebd24336e18b3008d362c-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/069a9d69fd4ca0137f93cfb159968ee1-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/ea5b7c4280e6ee17cf3874f317bd10f1-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/bcf594304b7569ffc98c792f10d8ffb6-p_f.jpg",
+              "https://photos.zillowstatic.com/fp/306c081455199f88dd33507543e1a825-p_f.jpg"
+            ]
+          }
+        },
+        "listing": {
+          "listingStatus": "forSale"
+        },
+        "price": {
+          "value": 3750000
+        },
+        "contact_info": {
+          "propertyInfo": {
+            "agentInfo": {
+              "displayName": "Thelma Lynn Dagandan-Tunque",
+              "businessName": "Hatch Realty Group, Inc. ",
+              "phoneNumber": "(415) 290-0930",
+              "agentBadgeType": "Agent",
+              "photoUrl": "https://photos.zillowstatic.com/fp/2ea72dd2097b63a839a61299cf8df5c6-h_e.jpg",
+              "profileUrl": "/profile/thelmatunque1/",
+              "reviewsReceivedCount": 27,
+              "reviewsUrl": "/profile/thelmatunque1/#reviews",
+              "recentSalesCount": null,
+              "ratingAverage": 4.9
+            }
+          }
+        },
+        "daysOnZillow": 0
+      }
+    }
+  ]
+}
