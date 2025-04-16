@@ -3,7 +3,9 @@ import csv
 import base64
 from openai import OpenAI
 from dotenv import load_dotenv
-from app.retry import retry_with_backoff  #you can use the retry.py in app/
+from retry import retry_with_backoff  #you can use the retry.py in app/
+import json
+import requests
 
 load_dotenv()
 client = OpenAI()
@@ -100,5 +102,30 @@ def run_classification(image_folder="images", output_csv="results.csv"):
                     print(f"Failed after retries: {e}")
                     writer.writerow([filename, "error"])
 
+def process_json_file(input_path="target-fields (1).json", output_path="target-fields-labeled.json"):
+    with open(input_path, "r") as f:
+        data = json.load(f)
+
+    properties = data.get("searchResults", [])
+
+    for prop in properties:
+        try:
+            photos = prop["property"]["media"]["allPropertyPhotos"]["highResolution"]
+            unstaged = []
+            for url in photos:
+                response = requests.get(url)
+                base64_img = base64.b64encode(response.content).decode("utf-8")
+                classification = classify_image(base64_img)
+                print(f"{url} => {classification}")
+                if classification == "unstaged":
+                    unstaged.append(url)
+            prop["property"]["media"]["allPropertyPhotos"]["unstaged"] = unstaged
+        except Exception as e:
+            print(f"Error processing property: {e}")
+
+    with open(output_path, "w") as f:
+        json.dump(data, f, indent=2)
+    print(f"Saved labeled JSON to {output_path}")
+
 if __name__ == "__main__":
-    run_classification()
+    process_json_file("target-fields (1).json")
